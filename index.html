@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Paper opening animation</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Scripts include -->
+    <script  src="js/angular.min.js"></script>
+    <script  src="js/script.js"></script>
+</head>
+<body ng-app="paperAnimation">
+<div class="main full-width" ng-controller="paperAnimationHome">
+    <div class="centered-content">
+        <!-- FIRST BOX SPEND UP TILTINGS -->
+        <section ng-class="classVar" class="container-section">
+            <div class="container-inside" ng-click="openAnimationLeftToRight()"></div>
+            <p class="titles" ng-click="spendUpTilting()">Left to right animation</p>
+            <div class="perspective">
+                <div class="infofirst-rl-single-box" ng-class="firstbox" ng-click="closeAnimationLeftToRight()">
+                </div>
+                <div class="tile" ng-class="firsttitleOpening">
+                    <div class="info-wrap" ng-class="firstinfoWrap">
+                        <div class="content" ng-class="showContentFirst">
+                            <div class="content-inside">
+                                <div class="close" ng-click="closeAnimationLeftToRight()">
+                                    <h1>Container title</h1>
+                                    <span>X</span>
+                                </div>
+                                <p class="desc">
+                                    What is Lorem Ipsum?
+
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="infosecond info">
+                            <div class="info-front" >
+                            </div>
+                            <div class="info-back"></div>
+                        </div>
+                        <div class="infothird info">
+                            <div class="info-front" >
+                            </div>
+                            <div class="info-back"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+</body>
+</html>

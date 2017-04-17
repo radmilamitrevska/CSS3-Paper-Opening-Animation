@@ -1,0 +1,417 @@
+/* Main Content */
+.main {
+  &.full-width {
+    float: left;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    .centered-content {
+      display: inline-block;
+      float: none;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 1500px;
+      position: relative;
+      height: 100%;
+      min-height: 100%;
+    }
+  }
+}
+/* Left Content */
+/* Spend up tilting */
+.container-section {
+  position: relative;
+  height: 367px;
+  width: 394px;
+  cursor: pointer;
+  margin-top: 50px;
+  .container-inside {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .titles {
+    position: absolute;
+    top: 110px;
+    right: 70px;
+    text-transform: uppercase;
+    line-height: 30px;
+    color: #fff;
+    font-family: $scala-bold;
+    letter-spacing: 1px;
+    font-size: 25px;
+    width: 215px;
+    text-align: center;
+  }
+  .perspective {
+    position: absolute;
+    left: 394px;
+    top: 0;
+    display: none;
+    @include tablet {
+      top: 10px;
+    }
+  }
+  /* First box opened */
+  &.open-section {
+    .perspective {
+      display: block;
+    }
+    .spend-up-tilting {
+      background-color: rgba(217, 218, 201, 0.8);
+    }
+    .titles {
+      color: #5d6617;
+    }
+  }
+  .infosecond {
+    left: 0;
+  }
+  .infothird {
+    right: 0;
+  }
+  .infofirst-rl-single-box {
+    height: 0;
+    width: 250px;
+    left: 0;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    &.active {
+      height: 367px;
+    }
+    &.transition {
+      @include transition(height 0.5s);
+    }
+  }
+}
+.infofirst-rl-single-box {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/*ANIMATION BOX CSS*/
+.tile {
+  height: 367px;
+  margin: 0 auto;
+  border-radius: 0%;
+  position: relative;
+  cursor: default;
+}
+.info-wrap {
+  height: 367px;
+  border-radius: 0%;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -o-perspective: 1000px;
+  -ms-perspective: 1000px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  top: 20px;
+  right: 20px;
+}
+/* Info wraps style */
+.info-wrap.info-wrap-open {
+  width: 250px;
+}
+.info-wrap.second {
+  width: 500px;
+  @include tablet {
+    width: 360px;
+  }
+}
+.info {
+  position: absolute;
+  width: 250px;
+  height: 367px;
+  border-radius: 0%;
+  -webkit-transform-origin: 100% 80%;
+  -moz-transform-origin: 100% 80%;
+  -o-transform-origin: 100% 80%;
+  -ms-transform-origin: 100% 80%;
+  transform-origin: 100% 80%;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  z-index: 2;
+  @include tablet {
+    width: 180px;
+  }
+}
+.info-rl {
+  position: absolute;
+  width: 250px;
+  height: 428px;
+  border-radius: 0%;
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  z-index: 2;
+  @include tablet {
+    height: 350px;
+  }
+}
+
+.infofirst {
+  width: 0;
+  right: 0;
+  height: 367px;
+  -ms-transform-origin: 100% 80%;
+  -ms-transform-style:  preserve-3d;
+  -ms-transition: all 0.4s ease-in-out;
+  z-index: 2;
+}
+.infofirst-rl {
+  right: 0;
+  background: #fff;
+  -ms-transform-origin: 0 50%;
+  -ms-transform-style:  preserve-3d;
+  -ms-transition: all 0.4s ease-in-out;
+  transition-delay: 15s;
+  width: 0px;
+}
+
+.infosecond {
+  right: 0;
+  -ms-transform-origin: 100% 80%;
+  -ms-transform-style:  preserve-3d;
+  -ms-transition: all 0.4s ease-in-out;
+  transition-delay: 0.5s;
+}
+.infosecond-rl {
+  right: 0;
+  -ms-transform-origin: 0 50%;
+  -ms-transform-style:  preserve-3d;
+  -ms-transition: all 0.4s ease-in-out;
+  transition-delay: 1s;
+}
+.infothird-rl {
+  right:250px;
+  transition-delay: 0.5s;
+  -ms-transform-origin:  0 50%;
+  -ms-transform-style:  preserve-3d;
+  -ms-transition: all 0.4s ease-in-out;
+  @include tablet {
+    right:180px;
+  }
+}
+.infothird {
+  right: 0;
+  -ms-transform-origin: 100% 80%;
+  -ms-transform-style:  preserve-3d;
+  -ms-transition: all 0.4s ease-in-out;
+  transition-delay: 0s;
+}
+.info > div {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+  background-position: center center;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.info-rl > div {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+  background-position: center center;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.info .info-back {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  background-color: #fff;
+}
+.info-rl .info-back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  background-color: #fff;
+}
+
+.tile_opening .info {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: none;
+  transform: rotateY(-180deg);
+}
+.tile_opening .info-rl {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: none;
+  transform: rotateY(180deg);
+}
+.tile_opening .info-rl {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: none;
+  transform: rotateY(180deg);
+}
+
+.tile_opening .infofirst {
+  transition-delay: 0.7s;
+  width: 250px;
+  background: #fff;
+  @include tablet {
+    width: 180px;
+  }
+}
+.tile_opening .infofirst-rl {
+  transition-delay: 0s;
+  width: 250px;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 428px;
+}
+
+.tile_opening .infosecond {
+  transition-delay: 0.2s;
+  background: #fff;
+}
+.tile_opening .infosecond-rl {
+  transition-delay: 0s;
+  background: #fff;
+}
+.tile_opening .infothird-rl {
+  transition-delay: 0.5s;
+  background: #fff;
+}
+.tile_opening .infothird {
+  transition-delay: 0.5s;
+  background: #fff;
+}
+.perspective,
+.perspective-wm {
+  z-index: 3;
+}
+
+/* Main boxes Content */
+.content {
+  position: absolute;
+  z-index:1000;
+  opacity:0;
+  height: 100%;
+  width: 749px;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  @include tablet {
+    width: 540px;
+  }
+  &.active {
+    opacity: 1;
+    transition: none;
+  }
+  .description-field {
+    float: left;
+    width: 100%;
+  }
+  .content-inside {
+    background: #fff;
+    float: left;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px 30px;
+    .close {
+      position: relative;
+      width: 100%;
+      float: left;
+      margin-right: 2px;
+      h1 {
+        float: left;
+        color: #5d6617;
+        font-family: $scala-regular;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: 20px;
+        padding: 0 0 24px 0;
+        cursor: pointer;
+        @include tablet {
+          font-size: 16px;
+        }
+        &:hover {
+          color: #f68b2f;
+        }
+      }
+      span {
+        float: right;
+        padding: 4px 8px;
+        background: #cfcfc2;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        @include tablet {
+          font-size: 16px;
+        }
+      }
+    }
+    .desc {
+      float: left;
+      width: 100%;
+      color: #f68b2f;
+      font-size: 28px;
+      line-height: 34px;
+      @include tablet {
+        font-size: 16px;
+        line-height: 28px;
+      }
+      &.extra-space {
+        margin-top: 25px;
+      }
+    }
+  }
+}

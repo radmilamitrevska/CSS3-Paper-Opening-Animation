@@ -1,0 +1,9 @@
+/* Main page for importing other style pages /*
+
+/* Import base styles */
+@import "base/variables.scss";
+@import "base/mixins.scss";
+@import "base/global.scss";
+
+/* Import elements */
+@import "pages/home.scss";
